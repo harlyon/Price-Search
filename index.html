@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Price Search</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script id="headerTemplate" type="x-handlebars-template">	
+		<h2>{{country}}</h2>
+	</script>
+
+	<script id="resultTemplate" type="x-handlebars-template">
+		<div class="resultContainer">
+			<h3>{{name}}</h3>
+			<img src="{{image}}" alt="">
+			<ul>
+				<li><span class="bold">Type: &nbsp; </span>{{type}}</li>
+				<li><span class="bold">Volume: &nbsp; </span>{{volume}}ml</li>
+				<li><span class="bold">Alc. Content: &nbsp; </span>{{alc}}%</li>
+				<li><span class="bold">Price: &nbsp; </span>${{price}}</li>
+			</ul>
+		</div>
+	</script>
+
+
+
+</head>
+<body>
+	<section class="hero">
+		<div class="hero-wrapper">
+			<h1>Price Search</h1>
+			<form action="" class="usersInput" id="usersInput">
+				<div class="form-div">
+					<div class="region-div">
+						<label for="region">Country</label>
+						<input id="region" type="text">
+					</div>
+					<div class="type-div">
+						<label for="type">Beer, Wine or Spirits?</label>
+						<select name="type" id="type">
+							<option value="Beer">Beer</option>
+							<option value="Wine">Wine</option>
+							<option value="Spirits">Spirits</option>
+						</select>
+					</div>
+					<div class="price-div">
+						<label for="price">Price Range</label>
+						<select name="price" id="price">
+							<option value="low">Lowest to Highest</option>
+							<option value="high">Highest to Lowest</option>
+						</select>
+					</div>
+				</div>
+				<div class="submit-div">
+					<input type="submit" id="submit">
+				</div>
+			</form>
+		</div>
+	</section>
+	<section class="results">
+		<div class="results-header" id="results-header">
+			
+		</div>
+		<div class="results-products" id="results-products">
+
+		</div>
+	</section>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+<script src="script.js"></script>
+
+
+</html>
